@@ -761,4 +761,20 @@ bool SlamToolbox::deserializePoseGraphCallback(
   return true;
 }
 
+/*****************************************************************************/
+bool SlamToolbox::createFullPointCloud(
+  slam_toolbox_msgs::CreateFullPointCloud::Request  &req,
+  slam_toolbox_msgs::CreateFullPointCloud::Response &resp)
+/*****************************************************************************/
+{
+  boost::mutex::scoped_lock lock(smapper_mutex_);
+
+  // Returns typedef for this std::vector<LocalizedRangeScan*>
+  LocalizedRangeScanVector scans = smapper_->getMapper()->GetAllScans();
+  
+  return true;
+
+}
+
+
 } // end namespace

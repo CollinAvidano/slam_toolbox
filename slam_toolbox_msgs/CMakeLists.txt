@@ -11,12 +11,14 @@ add_service_files(DIRECTORY srv
     ClearQueue.srv
     ToggleInteractive.srv
     Clear.srv
+    CreateFullPointCloud.srv
     SaveMap.srv
     LoopClosure.srv
     MergeMaps.srv
     AddSubmap.srv
     DeserializePoseGraph.srv
     SerializePoseGraph.srv
+
 )
 
 generate_messages(DEPENDENCIES ${MSG_DEPS})
